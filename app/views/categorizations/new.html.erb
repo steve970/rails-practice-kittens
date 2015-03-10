@@ -8,11 +8,9 @@
 
 
 <div class="row">
-
   <%= form_for [@kitten, @categorization], html: {class: "form-inline" }  do |f| %>
     <%= image_tag @kitten.image %>
     <%= f.collection_select(:category_id, Category.all, :id, :name, {prompt: 'Please choose a category...'}, {class: 'form-control'}) %>
     <%= f.submit "Add Category" %>
   <% end %>
-  
 </div>
